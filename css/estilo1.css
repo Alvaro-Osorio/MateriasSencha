@@ -1,0 +1,151 @@
+/*
+Hoja de estilo para ejemplo de columnas múltiples basado en la hoja libre 3col_leftNav.css
+Autor: BAOZ
+*/
+body{
+	font-family: Verdana, Helvetica, Arial, "Times New Roman";
+	margin-left: 0.1em;
+	margin-right: 0.1em;
+	margin-top: 0;
+}
+img, video, canvas {
+  max-width: 100%;
+}
+header {
+	height: 5em;
+	color: hsl(184, 33%, 35%); 
+	font-weight:bold;
+	font-size: large;
+	background-color: #B0C4DE; 
+	text-transform: capitalize;
+	text-shadow: 0.2em 0.2em 0.4em ligthblue; /*sombra horizontal y sombra vertical*/
+}
+nav {
+    width: 15%;
+	height: auto;
+	min-height: 32em;
+	margin: 0;
+	padding: 0;
+	background-color:lavander;
+	float: left;
+	color: DarkSlateGray;
+}
+section {
+	margin: 0 auto;
+	margin-bottom: 1px;
+	width: 85%;
+	height: auto;
+	min-height: 30em;
+	background-color:#ADD8E6;
+	float: left;
+	text-transform: none;
+	color: DarkSlateGray;
+}
+footer{
+	font-size: 75%;
+	padding: 10px 10px 10px 10px;
+	background-color:#ADD8E6;
+	text-align: center;
+	color: DarkSlateGray;
+}
+.por_columnas {
+	/*Definir número de columnas*/
+    -webkit-column-count: 3; /* Chrome, Safari, Opera */
+    -moz-column-count: 3; /* Firefox */
+    column-count: 3;
+	
+	/*Definir separación entre columnas
+		valor en pixeles|normal|initial|inherit
+	*/
+    -webkit-column-gap: 50px; /* Chrome, Safari, Opera */
+    -moz-column-gap: 50px; /* Firefox */
+    column-gap: 50px;
+	
+	/*
+		Para definir características de la línea de separación entre columnas:
+		-->Directo, column-rule: ancho, estilo y color
+		-->Por partes, column-rule-width, column-rule-style, column-rule-color
+	*/
+	
+	/*Definir ancho de línea de separación
+	medium|thin|thick|valor en pixeles |initial|inherit
+	*/
+    -webkit-column-rule-width: thin; /* Chrome, Safari, Opera */
+    -moz-column-rule-width: thin; /* Firefox */
+    column-rule-width: thin;
+	
+	/*Definir estilo de línea de separación 
+		none|hidden|dotted|dashed|solid|double|groove|ridge|inset|outset|initial|inherit
+	*/
+    -webkit-column-rule-style: dotted; /* Chrome, Safari, Opera */
+    -moz-column-rule-style: dotted; /* Firefox */
+    column-rule-style: dotted;
+	
+	/*Color de la línea*/
+    -webkit-column-rule-color: white; /* Chrome, Safari, Opera */
+    -moz-column-rule-color: white; /* Firefox */
+    column-rule-color: white;
+}
+
+.por_columnas_cab {
+	/*Definir número de columnas*/
+    -webkit-column-count: 3; /* Chrome, Safari, Opera */
+    -moz-column-count: 3; /* Firefox */
+    column-count: 3;
+	
+    -webkit-column-gap: 0.5em; /* Chrome, Safari, Opera */
+    -moz-column-gap: 0.5em; /* Firefox */
+    column-gap: 0.5em;
+	
+	/*Definir ancho de línea de separación
+	medium|thin|thick|valor en pixeles |initial|inherit
+	*/
+    -webkit-column-rule-width: thin; /* Chrome, Safari, Opera */
+    -moz-column-rule-width: thin; /* Firefox */
+    column-rule-width: thin;
+	
+	/*Definir estilo de línea de separación 
+		none|hidden|dotted|dashed|solid|double|groove|ridge|inset|outset|initial|inherit
+	*/
+    -webkit-column-rule-style: hidden; /* Chrome, Safari, Opera */
+    -moz-column-rule-style: hidden; /* Firefox */
+    column-rule-style: hidden;
+}
+/*Es posible que un elemento se expanda a lo ancho de varias columnas
+	1|all|initial|inherit
+*/
+h3{
+	-webkit-column-span: all; /* Chrome, Safari, Opera */
+	-moz-column-span: all; /* Firefox TODAVÍA NO IMPLEMENTADO*/
+    column-span: all;
+	text-align: center;
+}
+
+@media screen and (max-width: 600px){
+	header {
+		height: auto;
+	}
+	nav {
+		float: none;
+		width: auto;
+	}
+	section {
+		float: none;
+		width: auto;
+	}
+	.por_columnas {
+		-webkit-column-count: 1; /* Chrome, Safari, Opera */
+		-moz-column-count: 1; /* Firefox */
+		column-count: 1;
+	}
+	.por_columnas_cab {
+		-webkit-column-count: 1; /* Chrome, Safari, Opera */
+		-moz-column-count: 1; /* Firefox */
+		column-count: 1;
+	}
+}
+
+#nomSitio{
+	margin: 0;
+	padding: 0 0 0 0.5em;
+}
